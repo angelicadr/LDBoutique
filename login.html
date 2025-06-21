@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <h2>ACCESO DE ADMINISTRACION</h2><br>
+    <form>
+        <div>
+            Ingrese usuario:<br>
+            <input type="text" id="usuario" required><br><br>
+            Ingrese clave:<br>
+            <input type="password" id="clave" required><br><br>
+            <input type="button" value="Confirmar" onclick="verificar()">
+        </div>
+    </form>
+    </main>
+<footer>
+    © 2025 Mi Página LD Boutique. Todos los derechos reservados.
+    <div class="social-icons">
+
+      <a href="https://www.instagram.com/ld_boutique23" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.264 2.242 1.325 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.325 3.608-.975.975-2.242 1.264-3.608 1.325-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.264-2.242-1.325-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.325-3.608.975-.975 2.242-1.264 3.608-1.325C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.773.131 4.6.434 3.545 1.488 2.49 2.543 2.187 3.716 2.128 4.995.98 8.333.98 15.667 2.128 19.005c.059 1.28.362 2.453 1.417 3.508 1.055 1.055 2.228 1.358 3.507 1.417 1.28.059 1.689.072 4.947.072s3.667-.013 4.947-.072c1.279-.059 2.452-.362 3.507-1.417 1.055-1.055 1.358-2.228 1.417-3.508.059-1.338.059-8.662 0-10 .059-1.28-.362-2.453-1.417-3.508-1.055-1.055-2.228-1.358-3.507-1.417C15.668.013 15.259 0 12 0zM12 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838zm0 10.164A4.002 4.002 0 1 1 16.002 12 4.002 4.002 0 0 1 12 16.002zm6.406-11.845a1.44 1.44 0 1 1-2.881 0 1.44 1.44 0 0 1 2.881 0z"/>
+        </svg>
+      </a>
+     
+      <a href="https://www.tiktok.com/@ldboutique23" target="_blank" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12.204 2.003h3.355a5.46 5.46 0 0 0 5.438 5.025v3.332a8.766 8.766 0 0 1-4.568-1.262v7.688a6.235 6.235 0 0 1-6.23 6.23A6.235 6.235 0 0 1 4.97 16.016a6.235 6.235 0 0 1 6.23-6.23c.227 0 .45.014.67.04v3.48a2.764 2.764 0 0 0-.67-.086 2.75 2.75 0 1 0 2.75 2.75V2.003z"/>
+        </svg>
+      </a>
+    </div>
+</footer>
+    <script>
+        let control=0;
+        let contrasenia='adminld';
+        let userVal = 'admin';
+        function verificar() {
+            let user=document.getElementById('usuario').value;
+            let clave=document.getElementById('clave').value;
+            if(clave!=contrasenia || clave=='' || user != userVal){
+                alert('CLAVE INCORRECTA O VACIA...INTENTE DE NUEVO');
+                control++;
+                if(control>=3){
+                    alert('INTENTOS AGOTADOS, ACCESO DENEGADO\
+                        CONTACTAR A SOPORTE TÉCNICO');
+                }
+            }else{
+                window.open('admin.html');
+            }
+    }
+    </script>
+</body>
+</html>
